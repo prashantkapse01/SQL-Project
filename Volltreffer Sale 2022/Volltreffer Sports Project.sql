@@ -6,18 +6,12 @@ USE Prashant;
 SELECT * FROM volltreffer_data;
 
 DESCRIBE volltreffer_data;
-
-SELECT DATE(date)
-from volltreffer_data;
-
+  
 # Monthly Sales Analysis
 SELECT MONTHNAME(Date) AS MONTH_SALE,SUM(Amount) AS SALE
 FROM volltreffer_data
 GROUP BY MONTH_SALE
 ORDER BY SALE DESC;
-
-SELECT MONTH(Date)
-from volltreffer_data;
 
 # AVG-MAX-MIN Sales
 SELECT ROUND(AVG(Amount),2) AS Average,
